@@ -35,7 +35,7 @@ export const Card = styled.div`
   margin-left: 1%;
   width: 20%;
   height: 350px;
-  border-radius: 10px;
+  border-radius: 40px;
   margin-bottom: 1%;
   overflow: hidden;
   max-width: 100%;
@@ -55,7 +55,7 @@ export const Card = styled.div`
     margin-left: 1%;
     width: 300px;
     height: 35%;
-    border-radius: 10px;
+    border-radius: 40px;
     margin-bottom: 5%;
     overflow: hidden;
     max-width: 100%;
@@ -71,7 +71,7 @@ export const Card = styled.div`
     margin-left: 1%;
     width: 100%;
     height: 35%;
-    border-radius: 10px;
+    border-radius: 40px;
     margin-bottom: 5%;
     overflow: hidden;
     max-width: 100%;
@@ -87,7 +87,7 @@ export const Card = styled.div`
     margin-left: 1%;
     width: 100%;
     height: 40%;
-    border-radius: 10px;
+    border-radius: 40px;
     margin-bottom: 5%;
     overflow: hidden;
     max-width: 100%;
@@ -103,7 +103,7 @@ export const Card = styled.div`
     margin-left: 1%;
     width: 100%;
     height: 40%;
-    border-radius: 10px;
+    border-radius: 40px;
     margin-bottom: 5%;
     overflow: hidden;
     max-width: 100%;

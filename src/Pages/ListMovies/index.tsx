@@ -8,8 +8,11 @@ import * as Styled from "./styles";
 export const ListMovies: React.FC = () => {
   return (
     <Styled.Container>
-      <Header title={"List Movies"} placeholderTitle={"Buscar"} />
-
+      <Header
+        isSearch={true}
+        title={"Popular Movies "}
+        placeholderTitle={"Buscar"}
+      />
       <Card />
     </Styled.Container>
   );

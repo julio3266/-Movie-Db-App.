@@ -17,9 +17,8 @@ export const Title = styled.p`
 export const Input = styled.input`
   width: 20%;
   height: 28px;
-  border-radius: 8px;
-  border-color: ${({ theme }) => theme.colors.white};
-  border-width: 1px;
+  border-radius: 20px;
+
   background-color: ${({ theme }) => theme.colors.white};
   @media (min-width: 375px) and (max-width: 500px) {
     width: 45%;
