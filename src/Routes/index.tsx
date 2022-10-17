@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes as Router, BrowserRouter } from "react-router-dom";
-
 import { ListMovies } from "../Pages/ListMovies";
 import { MoviesDetails } from "../Pages/MoviesDetails";
 import { NotFound } from "../Pages/NotFound";
