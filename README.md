@@ -20,8 +20,7 @@ Abaixo temos as principais tecnologias por trás desta aplicação
 - **Code Linting** with
   - [Airbnb's JS Linting](https://github.com/airbnb/javascript) guidelines
 
-  - **Global Statement** with
-
+- **Global Statement** with
   - [Redux](https://redux.js.org/) A Predictable State Container for JS Apps
   - [React-Redux](https://react-redux.js.org/) Official React bindings for Redux
   - [Redux-Saga](https://redux-saga.js.org/) An intuitive Redux side effect manager.
