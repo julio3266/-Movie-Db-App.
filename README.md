@@ -9,19 +9,15 @@ Esse projeto foi desenvolvido em ReactJs - w/ TypeScript
 Abaixo temos as principais tecnologias por trás desta aplicação
 
 - **React Hooks**
-
   - [https://pt-br.reactjs.org/docs/hooks-intro.html](https://pt-br.reactjs.org/docs/hooks-intro.html)
 
 - **Arquitetura Flux**
-
   - [Redux](https://redux.js.org/docs/introduction/)
 
 - **Navegação**
-
   - [React Router Dom](https://reactrouter.com/en/main) 
 
 - **Code Linting** with
-
   - [Airbnb's JS Linting](https://github.com/airbnb/javascript) guidelines
 
   - **Global Statement** with
@@ -31,7 +27,6 @@ Abaixo temos as principais tecnologias por trás desta aplicação
   - [Redux-Saga](https://redux-saga.js.org/) An intuitive Redux side effect manager.
 
 - **StyledComponents**
-
   - [https://styled-components.com/docs/basics#getting-started](https://styled-components.com/docs/basics#getting-started)
 
 ## 🚀 Como começar
