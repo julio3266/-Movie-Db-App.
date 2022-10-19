@@ -1,32 +1,47 @@
 import React from "react";
+import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import { useNavigate } from "react-router-dom";
 import * as Styled from "./styles";
 
-export interface ICardData {
-  // image?: string;
-}
-export interface ICard {
-  cards: ICardData[];
+export interface IPoster {
+  cards: any[];
+  isTitle?: boolean;
+  category?: string;
 }
 
-export const Card: React.FC<ICard> = ({ cards }) => {
+export const Card: React.FC<IPoster> = ({ cards, isTitle, category }) => {
   const navigate = useNavigate();
 
+  const handleSelectedCard = (selectedCard: any) => {
+    navigate(`/detalhes/${selectedCard.name}`, {
+      state: {
+        title: selectedCard.name,
+        description: selectedCard.description,
+        rating: selectedCard.average,
+        backdropImage: selectedCard.backdrop,
+        poster: selectedCard.poster,
+      },
+    });
+  };
+
   return (
-    <Styled.Column>
-      {cards?.map((cardItem) => {
-        return (
-          <Styled.Row>
-            <Styled.Card onClick={() => navigate("/detalhes")}>
-              <Styled.Image
-                src={
-                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCh4VkJ-1GlA_-OTol2NLbSNd5DTwQtWJDc2C_L-trGB0ZIIkT"
-                }
-              />
+    <>
+      <ScrollMenu
+        Header={
+          isTitle && <Styled.CategoryTitle>{category}</Styled.CategoryTitle>
+        }
+      >
+        {cards?.map((item, index) => {
+          return (
+            <Styled.Card
+              onClick={() => handleSelectedCard(item)}
+              key={index.toString()}
+            >
+              <Styled.Image src={`${item.poster}`} />
             </Styled.Card>
-          </Styled.Row>
-        );
-      })}
-    </Styled.Column>
+          );
+        })}
+      </ScrollMenu>
+    </>
   );
 };

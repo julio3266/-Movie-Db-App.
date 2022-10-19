@@ -38,7 +38,7 @@ export const Content = styled.div`
 `;
 
 export const Img = styled.img`
-  width: 40%;
+  width: 35%;
   height: 100%;
   max-height: 100%;
   max-width: 100%;

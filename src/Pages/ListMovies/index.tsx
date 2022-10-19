@@ -1,35 +1,47 @@
 import React, { useMemo } from "react";
-import {
-  getMoviesSelector,
-  getErrorSelector,
-  getPendingSelector,
-} from "../../Store/Modules/Movies/selectors";
-import { fetchMovieRequest } from "../../Store/Modules/Movies/actions";
 import { useDispatch, useSelector } from "react-redux";
-import * as Styled from "./styles";
 
 import { Card } from "../../Components/Card";
 import { Header } from "../../Components/Header";
+import {
+  fetchActioMoviesRequest,
+  fetchTerrorMovieRequest,
+} from "../../Store/Modules/Movies/MoviesPerType/actions";
+import { fetchPopularMoviesRequest } from "../../Store/Modules/Movies/popular/actions";
 
 export const ListMovies: React.FC = () => {
   const dispatch = useDispatch();
-  const pending = useSelector(getPendingSelector);
-  const movies = useSelector(getMoviesSelector);
-  const error = useSelector(getErrorSelector);
+  const movies: any = useSelector((state) => state);
 
   useMemo(() => {
-    dispatch(fetchMovieRequest());
+    dispatch(fetchPopularMoviesRequest());
+    dispatch(fetchActioMoviesRequest());
+    dispatch(fetchTerrorMovieRequest());
   }, [dispatch]);
 
   return (
-    <Styled.Container>
+    <>
       <Header
         isSearch={true}
-        title={"Filmes populares"}
+        title={"Movie List App"}
         placeholderTitle={"Buscar"}
       />
 
-      <Card cards={movies} />
-    </Styled.Container>
+      <Card
+        isTitle={true}
+        category={"Populares"}
+        cards={movies.popularMovies.popularMovies}
+      />
+      <Card
+        isTitle={true}
+        category={"Ação"}
+        cards={movies.moviesPerType.actionMovies}
+      />
+      <Card
+        isTitle={true}
+        category={"Terror"}
+        cards={movies.moviesPerType.terrorMovies}
+      />
+    </>
   );
 };
