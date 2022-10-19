@@ -18,7 +18,7 @@ Abaixo temos as principais tecnologias por trás desta aplicação
 
 - **Navegação**
 
-  - [React Router Dom](https://reactnavigation.org/docs/getting-started/) for native mobile navigation
+  - [React Router Dom](https://reactrouter.com/en/main) 
 
 - **Code Linting** with
 
