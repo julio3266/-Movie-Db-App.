@@ -2,7 +2,7 @@ import React from "react";
 import * as Styled from "./styles";
 
 interface IHeader {
-  title: string;
+  title?: string;
   placeholderTitle?: string;
   isSearch: boolean;
 }

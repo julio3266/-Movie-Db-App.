@@ -9,7 +9,7 @@ export const Routes: React.FC = () => {
     <BrowserRouter>
       <Router>
         <Route path="/" element={<ListMovies />} />
-        <Route path="/detalhes" element={<MoviesDetails />} />
+        <Route path="/detalhes/:movie" element={<MoviesDetails />} />
         <Route path="/*" element={<NotFound />} />
       </Router>
     </BrowserRouter>

@@ -1,7 +1,8 @@
 import { all, fork } from "redux-saga/effects";
 
-import movieSaga from "./Modules/Movies/sagas";
+import popularmoviesSaga from "./Modules/Movies/popular/sagas";
+import moviesPerTypeSagas from "./Modules/Movies/MoviesPerType/sagas";
 
 export function* rootSaga() {
-  yield all([fork(movieSaga)]);
+  yield all([popularmoviesSaga(), moviesPerTypeSagas()]);
 }
